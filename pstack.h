@@ -26,8 +26,6 @@ char pop(p_stack *ps);
 
 char peek(p_stack *ps);
 
-void clear_p_stack(p_stack *ps);
-
 void print_stack_contents(p_stack *ps);
 
 #endif // STACK_H

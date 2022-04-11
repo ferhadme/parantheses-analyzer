@@ -61,12 +61,6 @@ char peek(p_stack *ps)
     return *(ps->parans + ps->top);
 }
 
-void clear_p_stack(p_stack *ps)
-{
-    for (int i = 0; i < size(ps); i++)
-	pop(ps);
-}
-
 static char *expand(p_stack *ps)
 {
     ps->capacity *= 2;
