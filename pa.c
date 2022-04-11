@@ -53,16 +53,14 @@ int main(int argc, char **argv) {
 	if (is_left_paranthese(*p)) {
 	    push(ps, *p);
 	} else if (is_right_paranthese(*p)) {
-	    if (pop(ps) != flip(*p)) {
+	    if (pop(ps) != flip(*p))
 		unbalanced(p_exp, ps, margin);
-	    }
 	}
 	margin++;
     }
 
-    if (!is_empty(ps)) {
+    if (!is_empty(ps))
 	unbalanced(p_exp, ps, margin);
-    }
 
     printf("Balanced parantheses\n");
     free_p_stack(ps);
