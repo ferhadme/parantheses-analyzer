@@ -40,7 +40,7 @@ bool is_empty(p_stack *ps)
 void push(p_stack *ps, char elem)
 {
     if (size(ps) == ps->capacity)
-	expand(ps);
+	ps->parans = expand(ps);
     *(ps->parans + (++ps->top)) = elem;
 }
 
@@ -52,7 +52,7 @@ char pop(p_stack *ps)
     *(ps->parans + (ps->top--)) = '\0';
     if (size(ps) == ps->capacity / 2
 	&& ps->capacity > INITIAL_CAPACITY)
-	shrink(ps);
+	ps->parans = shrink(ps);
     return removed;
 }
 
