@@ -57,6 +57,8 @@ int main(int argc, char **argv) {
 		unbalanced(p_exp, ps, margin);
 	}
 	margin++;
+	if (*p == '\n' && *(p + 1) != '\0')
+	    margin = 0;
     }
 
     if (!is_empty(ps))
