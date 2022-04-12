@@ -39,7 +39,8 @@ void unbalanced(char *p_exp, p_stack *ps, int margin)
     exit(1);
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     if (argc != 2) {
 	printf("Usage: %s [parantheses expression]", *argv);
 	return 1;
