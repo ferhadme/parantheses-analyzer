@@ -39,4 +39,10 @@ if (true) {
 	return;
 {}}{'
    ^
+
+$ ./pa $(perl -e 'print "()" x 10000 . "\n";')
+Balanced parantheses
+
+$ ./pa $(perl -e 'print "()(" x 100 . "\n";')
+Balanced parantheses
 ```
