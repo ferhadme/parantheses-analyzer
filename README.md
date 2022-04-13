@@ -37,7 +37,7 @@ Unbalanced parantheses
 if (true) {
 	printf("true\n");
 	return;
-{}}{'
+{}}{
    ^
 
 $ ./pa $(perl -e 'print "()" x 10000 . "\n";')
